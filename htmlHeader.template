@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>PiSchaltuhr</title>
+		<meta charset="UTF-8"/> 
+	</head>
+	<body>
+	<style>
+	
+		.footer {
+			
+			bottom:2px; 
+			width:100%;
+			
+		}
+	
+		.footerButton {
+			height: 50px;
+			border: none;
+			color: white;
+			padding: 1%;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size:13px;
+			vertical-align:middle;
+			margin:1%;
+			width:30%;
+			background-color: grey;
+		}
+		
+		.tableButton {
+			height: 20px;
+			border: none;
+			color: white;
+			padding: 2px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size:10px;
+			vertical-align:middle;
+			margin: 2px;
+			width: 70px;
+		}
+	</style>
+		<div id="content" style="position:relative;width:90%;left:5%">
