@@ -162,8 +162,9 @@ public class MainView {
 	
 	public String getPreferencesContent() {
 		String result = "\t<div id=\"content\"><form method=\"get\">\n"
-			+ "\t\t<button type=\"submit\" name=\"action\" value=\"shutdown\" style=\"background-color: #f44336;height=50px;border:none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;vertical-align:middle;margin:5%;width:40%;\">Herunterfahren</button>"
-			+ "<button type=\"submit\" name=\"action\" value=\"update\" style=\"background-color: #f44336;height=50px;border:none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;vertical-align:middle;margin:5%;width:40%;\">Aktualisieren</button>\n"
+			+ "\t\t<button type=\"submit\" name=\"action\" value=\"init\" style=\"background-color: #f44336;height=50px;border:none;color: white;padding: 1%;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;vertical-align:middle;margin:1%;width:30%;\">Neu initialisieren</button>"
+			+ "\t\t<button type=\"submit\" name=\"action\" value=\"shutdown\" style=\"background-color: #f44336;height=50px;border:none;color: white;padding: 1%;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;vertical-align:middle;margin:1%;width:30%;\">Herunterfahren</button>"
+			+ "<button type=\"submit\" name=\"action\" value=\"update\" style=\"background-color: #f44336;height=50px;border:none;color: white;padding: 1%;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;vertical-align:middle;margin:1%;width:30%;\">Aktualisieren</button>\n"
 			+ "\t</form>\n"
 			+ ""
 			+ "<p><h2>Liste der registrierten Steckdosen:</h2></p>\n"
@@ -311,6 +312,9 @@ public class MainView {
 			} else if (action.equals("update")) {
 				Commands.update();
 				return "<p>Wird aktualisiert und anschliessend neu gestartet</p><p><a href=\"?page=main\">Weiter</a></p>";
+			} else if (action.equals("init")) {
+				Commands.init();
+				return getMainContent();
 			}
 				
 		}

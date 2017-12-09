@@ -57,6 +57,16 @@ public class Commands {
 		}
 	}
 	
+	public static void init() {
+		System.out.println(new Date() + " Initialising pilight");
+		ProcessBuilder pb = new ProcessBuilder("sudo", "/bin/bash", "init.sh");
+		try {
+			pb.start();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static void switchPowerPlug(PowerPlug pp, boolean switchOn) {
 		System.out.println("Switching " + pp.getDescription() + " (" + pp.getId() + " " + pp.getSystemCode() + " " + pp.getPlugCode() + ") to " + switchOn);
 //		String plugCode = String.valueOf(pp.getPlugCode());

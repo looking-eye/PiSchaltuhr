@@ -76,7 +76,7 @@ public class Main {
 //		testDates();
 		ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
-        Server jettyServer = new Server(8080);
+        Server jettyServer = new Server(80);
         jettyServer.setHandler(context);
         ServletHolder jerseyServlet = context.addServlet(org.glassfish.jersey.servlet.ServletContainer.class, "/*");
         jerseyServlet.setInitOrder(0);

@@ -243,7 +243,8 @@ public class Engine implements Runnable {
 				Commands.allOn();
 			} else {
 				for (int i = 0; i < ppe.getAffectedPlugs().length; i++) {
-					PowerPlug ppToSwitch = PiTimeTriggerModel.getInstance().getPowerPlug(ppe.getID());
+//					PowerPlug ppToSwitch = PiTimeTriggerModel.getInstance().getPowerPlug(ppe.getID());
+					PowerPlug ppToSwitch = PiTimeTriggerModel.getInstance().getPowerPlug(ppe.getAffectedPlugs()[i]);
 					Commands.switchPowerPlug(ppToSwitch, true);
 				}
 			}
@@ -253,7 +254,8 @@ public class Engine implements Runnable {
 				Commands.allOff();
 			} else {
 				for (int i = 0; i < ppe.getAffectedPlugs().length; i++) {
-					PowerPlug ppToSwitch = PiTimeTriggerModel.getInstance().getPowerPlug(ppe.getID());
+					//PowerPlug ppToSwitch = PiTimeTriggerModel.getInstance().getPowerPlug(ppe.getID());
+					PowerPlug ppToSwitch = PiTimeTriggerModel.getInstance().getPowerPlug(ppe.getAffectedPlugs()[i]);
 					Commands.switchPowerPlug(ppToSwitch, false);
 				}
 			}
