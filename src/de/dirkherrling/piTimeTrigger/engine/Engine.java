@@ -237,6 +237,12 @@ public class Engine implements Runnable {
 	}
 	
 	public void execute(PlannedPowerEvent ppe) {
+		Commands.init();
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		if (ppe.isSwitchOn()) {
 			if (ppe.getAffectedPlugs() == null || ppe.getAffectedPlugs().length == 0) {
 				//switch all on
